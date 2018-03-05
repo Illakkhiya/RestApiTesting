@@ -115,7 +115,7 @@ public class TicketTest {
 	public void listTicketTest() {
 		// create 10 sample tickets to list
 		for (int i = 0; i < 10; i++) {
-			Response res = createTicket();
+			createTicket();
 		}
 
 		Response res = given().auth().basic(USERNAME, APITOKEN).when().get("/api/v2/tickets.json").then()
